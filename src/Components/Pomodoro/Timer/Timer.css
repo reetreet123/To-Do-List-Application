@@ -1,0 +1,13 @@
+.timer{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+
+}
+.display-start-pause{
+    position: absolute;
+    top: 140px;
+    background-color: transparent;
+    color: var(--fifth-color);
+    border: none;
+}
