@@ -1,0 +1,237 @@
+:root {
+  --primary-color: #171717;
+  --secondary-color: #444444;
+  --tertiary-color: #E5E5E5;
+  --fourth-color: #030712;
+  --fifth-color: #DA0037;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #47454d;
+  background-color: var(--primary-color);
+  font-family: "Raleway", sans-serif;
+}
+:root {
+  --sidebar-width: 56px;
+  --primary-color: #171717;
+  --secondary-color: #444444;
+  --tertiary-color: #E5E5E5;
+  --fourth-color: #030712;
+  --fifth-color: #DA0037;
+  --light-grey: #888888;
+  --dark-red:#6c1a1a;
+}
+
+.to-do-card-container, .pomodoro-container{
+  width: 500px;
+  height: 600px;
+  background-color: var(--fourth-color);
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+}
+.to-do-Header i{
+  font-size: 90px;
+  color: rgb(200, 170, 0);
+}
+.pomodoro-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24%;
+}
+
+section {
+  height: 100vh;
+  padding: 0 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 50px;
+}
+
+
+section p {
+  max-width: 600px;
+}
+.to-do-card-container .to-do-Header{
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+}
+
+.Day-container h1{
+  margin: 0;
+}
+.Day-container{
+  margin: 0;
+}
+
+/* checkbox style from here */
+
+.checkbox-wrapper input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+  color: white;
+}
+
+.checkbox-wrapper *,
+.checkbox-wrapper ::after,
+.checkbox-wrapper ::before {
+  box-sizing: border-box;
+  user-select: none;
+  color: white;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  color: white;
+}
+
+.checkbox-wrapper .label {
+  cursor: pointer;
+}
+
+.checkbox-wrapper .check {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+  color: white;
+}
+
+.checkbox-wrapper .label svg {
+  vertical-align: middle;
+  color: white;
+}
+
+.checkbox-wrapper .path1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: .5s all;
+  opacity: 0;
+  color: white;
+}
+
+.checkbox-wrapper .check:checked+label svg g path {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  color: white;
+}
+.sunny{
+  display: flex;
+  flex-direction: column;
+}
+.add-section-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: fit-content;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+  align-self: baseline;
+  padding: 5px;
+  width: 100%;
+}
+
+.add-section-container input , .add-section-container button{
+  background-color: var(--fourth-color);
+  border: none;
+  padding: 5px;
+  outline: none;
+  color: var(--light-grey) ;
+  border-radius: 20px;
+}
+.add-section-container button{
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.add-section-container button:hover{
+  color: white;
+}
+.add-section-container button:active{
+  font-size: 26px;
+}
+.add-section-container input{
+  width: 95%;
+}
+.task-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.task-container i{
+  color: var(--light-grey);
+  cursor: pointer;
+}
+.task-container i:hover{
+  color: var(--dark-red);
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  border: 1px solid var(--dark-red);
+  animation: shake 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  .to-do-card-container, .pomodoro-container{
+    width: 80vw;
+    min-height: 80vw;
+    max-height: 90vh;
+    background-color: var(--fourth-color);
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+  }
+  .to-do-Header{
+    margin-bottom: 20px;
+  }
+  section {
+    height: 100vh;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 200%;
+    row-gap: 50px;
+  }
+  .to-do-Header h1{
+    font-size: 23px;
+  }
+  .to-do-Header i{
+    font-size: 50px;
+  }
+  .setting-panel{
+    background-color: var(--primary-color);
+    padding: 12px;
+    border-radius: 16px;
+    color: white;
+    position: relative;
+    position: absolute;
+    top: 700px;
+    z-index: 2;
+    height: 228px;
+    left: 22%;
+    width: 300px;
+    height: 400px;
+  }
+}
