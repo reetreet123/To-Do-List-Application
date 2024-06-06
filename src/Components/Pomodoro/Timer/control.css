@@ -1,0 +1,29 @@
+.controls {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    background-color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.hidden-radio {
+    opacity: 0;
+    position: absolute;
+    margin-left: -9999px;
+    /* Move the actual button out of the viewport */
+}
+
+.lable{
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+
+.hidden-radio:checked+.lable {
+    background-color: var(--fifth-color);
+    color: white;
+}
